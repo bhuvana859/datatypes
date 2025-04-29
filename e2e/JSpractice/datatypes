@@ -1,0 +1,91 @@
+// // JS Datatypes
+// // JS is a weakly typed language, which means that variables can hold values of any type and can be changed at runtime.
+
+// //Datatypes 
+
+// // 1. Primitive Datatypes
+
+//     // 1. number  10,20,45,30,50,23.6
+
+//     // 2. string "Raju", "Car", "sentence"
+
+//     // 3. Boolean true, false
+
+//     // 4. undefined - variable is declared but not assigned any value
+
+//     // 5. null - variable is declared and assigned empty value
+
+// //2. Non Primitive Datatypes 
+  
+
+// //1. object
+
+//       var student = {
+//             stuname : "Manjunath", 
+//             place: "blr",
+//             age: 29,
+//             employeeed : true
+
+// }
+
+// // //2. arrays
+
+// // ["Manjunath", "blr", 29, true]
+
+// // //3. regular expressions 
+
+// // var regex = /[A-Za-z]+/; // Matches one or more alphabetic characters
+// // var testString = "Hello123";
+
+// // console.log(regex.test(testString)); // true, as it contains alphabetic characters
+// // console.log(testString.match(regex)); // ["Hello"], matches the first occurrence
+
+
+
+// var x = 10
+
+// console.log(typeof(x))
+
+// undefined - varibale is declared but not assigned any value - undefined 
+// null - veriable is declared and assigned empty value - object
+
+// bug  in JS 
+
+// Initially JS Developers comapred with C
+
+
+// Non Primitive Datatype
+
+// 1. object
+
+//   var student = {
+//        stuname : "Manjunath",
+//        place: "blr",
+//        age: 29,
+//        employeeed : true
+//   }
+
+//   console.log(student.stuname)
+
+//   console.log(typeof(student.employeeed))
+
+//   2. arrays
+
+//    arr = ["Manjunath", "blr", 29, true]
+
+// //    homogenious = All elements in array same datatype
+// //     hetrogenious = All elements in array different datatype 
+// //    arr = [10, 20, 30, 40, 50] // homogenious
+// //    arr = ["Manjunath", "blr", 29, true] // hetrogenious
+
+//    console.log(arr[0]) // 1st element in array
+//    console.log(arr[1]) // 2nd element in array
+//    console.log(arr[2]) // 3rd element in array
+//    console.log(arr[3]) // 4th element in array
+//    console.log(arr[4]) // 5th element in array
+
+
+//  //  index starts from 0
+
+
+//examples
