@@ -1,0 +1,227 @@
+{
+  "config": {
+    "configFile": "D:\\LEARNINGPLAYWRIGHTB22\\playwright.config.js",
+    "rootDir": "D:/LEARNINGPLAYWRIGHTB22/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 1800000,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/LEARNINGPLAYWRIGHTB22/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/LEARNINGPLAYWRIGHTB22/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/LEARNINGPLAYWRIGHTB22/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "D:/LEARNINGPLAYWRIGHTB22/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/LEARNINGPLAYWRIGHTB22/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "D:/LEARNINGPLAYWRIGHTB22/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.51.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "lockedoutuser2.spec.js",
+      "file": "lockedoutuser2.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "verify swaglabs locked_out_user2 loginfunctionality with valid credentials ",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 13635,
+                  "error": {
+                    "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.saucedemo.com/v1/\nCall log:\n\u001b[2m  - navigating to \"https://www.saucedemo.com/v1/\", waiting until \"load\"\u001b[22m\n",
+                    "stack": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.saucedemo.com/v1/\nCall log:\n\u001b[2m  - navigating to \"https://www.saucedemo.com/v1/\", waiting until \"load\"\u001b[22m\n\n    at D:\\LEARNINGPLAYWRIGHTB22\\tests\\lockedoutuser2.spec.js:6:16",
+                    "location": {
+                      "file": "D:\\LEARNINGPLAYWRIGHTB22\\tests\\lockedoutuser2.spec.js",
+                      "column": 16,
+                      "line": 6
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m test(\u001b[32m'verify swaglabs locked_out_user2 loginfunctionality with valid credentials '\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.saucedemo.com/v1/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[name=\"user-name\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39musernameee)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[name=\"password\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\LEARNINGPLAYWRIGHTB22\\tests\\lockedoutuser2.spec.js",
+                        "column": 16,
+                        "line": 6
+                      },
+                      "message": "Error: page.goto: net::ERR_INTERNET_DISCONNECTED at https://www.saucedemo.com/v1/\nCall log:\n\u001b[2m  - navigating to \"https://www.saucedemo.com/v1/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m test(\u001b[32m'verify swaglabs locked_out_user2 loginfunctionality with valid credentials '\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m'https://www.saucedemo.com/v1/'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[name=\"user-name\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39musernameee)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[name=\"password\"]'\u001b[39m)\u001b[33m.\u001b[39mfill(data\u001b[33m.\u001b[39mpassword)\u001b[33m;\u001b[39m\n \u001b[90m 9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m'input[type=\"submit\"]'\u001b[39m)\u001b[33m.\u001b[39mclick()\u001b[0m\n\u001b[2m    at D:\\LEARNINGPLAYWRIGHTB22\\tests\\lockedoutuser2.spec.js:6:16\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-04-23T00:41:04.438Z",
+                  "attachments": [
+                    {
+                      "name": "_prompt-0",
+                      "contentType": "text/markdown",
+                      "body": "IyBJbnN0cnVjdGlvbnMKCi0gRm9sbG93aW5nIFBsYXl3cmlnaHQgdGVzdCBmYWlsZWQuCi0gRXhwbGFpbiB3aHksIGJlIGNvbmNpc2UsIHJlc3BlY3QgUGxheXdyaWdodCBiZXN0IHByYWN0aWNlcy4KLSBQcm92aWRlIGEgc25pcHBldCBvZiBjb2RlIHdpdGggdGhlIGZpeCwgaWYgcG9zc2libGUuCgojIFRlc3QgaW5mbwoKLSBOYW1lOiB2ZXJpZnkgc3dhZ2xhYnMgbG9ja2VkX291dF91c2VyMiBsb2dpbmZ1bmN0aW9uYWxpdHkgd2l0aCB2YWxpZCBjcmVkZW50aWFscyAKLSBMb2NhdGlvbjogRDpcTEVBUk5JTkdQTEFZV1JJR0hUQjIyXHRlc3RzXGxvY2tlZG91dHVzZXIyLnNwZWMuanM6NTo1CgojIEVycm9yIGRldGFpbHMKCmBgYApFcnJvcjogcGFnZS5nb3RvOiBuZXQ6OkVSUl9JTlRFUk5FVF9ESVNDT05ORUNURUQgYXQgaHR0cHM6Ly93d3cuc2F1Y2VkZW1vLmNvbS92MS8KQ2FsbCBsb2c6CiAgLSBuYXZpZ2F0aW5nIHRvICJodHRwczovL3d3dy5zYXVjZWRlbW8uY29tL3YxLyIsIHdhaXRpbmcgdW50aWwgImxvYWQiCgogICAgYXQgRDpcTEVBUk5JTkdQTEFZV1JJR0hUQjIyXHRlc3RzXGxvY2tlZG91dHVzZXIyLnNwZWMuanM6NjoxNgpgYGAKCiMgVGVzdCBzb3VyY2UKCmBgYHRzCiAgIDEgfAogICAyIHwgaW1wb3J0IGRhdGEgZnJvbSAnLi90ZXN0ZGF0YS9sb2NrZWRvdXR1c2VyLmpzb24nCiAgIDMgfCBpbXBvcnQgeyB0ZXN0LCBleHBlY3QgfSBmcm9tICdAcGxheXdyaWdodC90ZXN0JzsKICAgNCB8CiAgIDUgfCB0ZXN0KCd2ZXJpZnkgc3dhZ2xhYnMgbG9ja2VkX291dF91c2VyMiBsb2dpbmZ1bmN0aW9uYWxpdHkgd2l0aCB2YWxpZCBjcmVkZW50aWFscyAnLCBhc3luYyAoeyBwYWdlIH0pID0+IHsKPiAgNiB8ICAgICBhd2FpdCBwYWdlLmdvdG8oJ2h0dHBzOi8vd3d3LnNhdWNlZGVtby5jb20vdjEvJyk7CiAgICAgfCAgICAgICAgICAgICAgICBeIEVycm9yOiBwYWdlLmdvdG86IG5ldDo6RVJSX0lOVEVSTkVUX0RJU0NPTk5FQ1RFRCBhdCBodHRwczovL3d3dy5zYXVjZWRlbW8uY29tL3YxLwogICA3IHwgICAgIGF3YWl0IHBhZ2UubG9jYXRvcignaW5wdXRbbmFtZT0idXNlci1uYW1lIl0nKS5maWxsKGRhdGEudXNlcm5hbWVlZSk7CiAgIDggfCAgICAgYXdhaXQgcGFnZS5sb2NhdG9yKCdpbnB1dFtuYW1lPSJwYXNzd29yZCJdJykuZmlsbChkYXRhLnBhc3N3b3JkKTsKICAgOSB8ICAgICBhd2FpdCBwYWdlLmxvY2F0b3IoJ2lucHV0W3R5cGU9InN1Ym1pdCJdJykuY2xpY2soKQogIDEwIHwgICAgIGF3YWl0IGV4cGVjdChwYWdlLmxvY2F0b3IoJ1NvcnJ5LCB0aGlzIHVzZXIgaGFzIGJlZW4gbG9ja2VkIG91dC4nKSkudG9CZVZpc2libGUKICAxMSB8ICAgICBhd2FpdCBleHBlY3QocGFnZSkudG9IYXZlVVJMKCdodHRwczovL3d3dy5zYXVjZWRlbW8uY29tL3YxLycpCiAgMTIgfAogIDEzIHwgfSkgCmBgYA=="
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\LEARNINGPLAYWRIGHTB22\\tests\\lockedoutuser2.spec.js",
+                    "column": 16,
+                    "line": 6
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "interrupted",
+                  "duration": 18,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-04-23T00:41:22.787Z",
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\LEARNINGPLAYWRIGHTB22\\test-results\\lockedoutuser2-verify-swag-96f33-ity-with-valid-credentials--chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a9d7e5694c9f31bd9a62-643819b790851641958d",
+          "file": "lockedoutuser2.spec.js",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "verify swaglabs locked_out_user2 loginfunctionality with valid credentials ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "firefox",
+              "projectName": "firefox",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a9d7e5694c9f31bd9a62-b019c19c4f400a664c9a",
+          "file": "lockedoutuser2.spec.js",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "verify swaglabs locked_out_user2 loginfunctionality with valid credentials ",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "webkit",
+              "projectName": "webkit",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a9d7e5694c9f31bd9a62-14434d3d95405358dbad",
+          "file": "lockedoutuser2.spec.js",
+          "line": 5,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-04-23T00:41:02.649Z",
+    "duration": 24954.571,
+    "expected": 0,
+    "skipped": 2,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
