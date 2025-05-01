@@ -32,6 +32,7 @@ import jobtitledata from "../testdata/addjobtitle.json"
      
         await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index', {timeout: 15000});
 
+        
         await expect(page.locator('ul[class="oxd-main-menu"]')).toBeVisible()
         // click on the admin module
         await page.locator('a[href="/web/index.php/admin/viewAdminModule"]').click();

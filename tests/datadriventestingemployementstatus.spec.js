@@ -34,6 +34,6 @@ test(`data driven testing   - ${employests[employe]}`,async ({page}) => {
    await page.locator("i.oxd-icon.bi-plus.oxd-button-icon").click();
 
    await page. locator("//label[normalize-space(text())='Name']/following::input").fill(employests[employe]);
- 
+   
 })
 }
