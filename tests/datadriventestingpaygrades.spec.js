@@ -4,16 +4,16 @@ import login from '../testdata/login.json';
 
 const paygrades = {
 
-     pay1: "Attender",
-     pay2: "Security",
-     pay3: "Driver",
-     pay4: "Technician",
+     paye1: "Attender",
+     paye2: "Security",
+     paye3: "Driver",
 }
 
 
 
-for(let pay in paygrades){
-test(`data driven testing for pay - ${paygrades[pay]}`, async ({ page }) => {
+for(let paye in paygrades){
+
+test(`data driven testing  - ${paygrades[paye]}`, async ({ page }) => {
 
    await page.goto("/web/index.php/auth/login")
 
@@ -37,13 +37,14 @@ test(`data driven testing for pay - ${paygrades[pay]}`, async ({ page }) => {
 
    await page.locator("button.oxd-button.oxd-button--medium").click();
 
-   const random5Char = Math.random().toString(36).substring(2, 7);
 
-   await page.locator("//label[normalize-space(text())='Name']/following::input").fill(paygrades[pay])
+   await page.locator("//label[normalize-space(text())='Name']/following::input").fill(paygrades[paye])
+
    await page.locator("button[type='submit']").click()
 
    
 
+})
 
-  })
+
 }
