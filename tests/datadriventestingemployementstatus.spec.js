@@ -2,18 +2,18 @@ import { test, expect } from '@playwright/test';
 import login from '../testdata/login.json';
 
 
-const paygrades = {
+ const employests = {
 
-     paye1: "Attender",
-     paye2: "Security",
-     paye3: "Driver",
-}
+      empl1 : "fulltime",
+      empl2 : "contract",
+      empl3 : "parttime",
+ }
 
 
 
-for(let paye in paygrades){
+for(let employe in employests){
 
-test(`data driven testing  - ${paygrades[paye]}`, async ({ page }) => {
+test(`data driven testing   - ${employests[employe]}`,async ({page}) => {
 
    await page.goto("/web/index.php/auth/login")
 
@@ -26,25 +26,14 @@ test(`data driven testing  - ${paygrades[paye]}`, async ({ page }) => {
    await expect(page).toHaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index');
 
    await expect(page.locator('ul[class="oxd-main-menu"]')).toBeVisible()
-   // click on the admin module
    await page.locator('a[href="/web/index.php/admin/viewAdminModule"]').click();
 
-   //clcik on the Job
    
    await page.locator("//li[contains(.,'Job')]").click();
+   await page.locator("(//a[@class='oxd-topbar-body-nav-tab-link'])[3]").click();
+   await page.locator("i.oxd-icon.bi-plus.oxd-button-icon").click();
 
-   await page.locator("//a[normalize-space(text())='Pay Grades']").click();
-
-   await page.locator("button.oxd-button.oxd-button--medium").click();
-
-
-   await page.locator("//label[normalize-space(text())='Name']/following::input").fill(paygrades[paye])
-
-   await page.locator("button[type='submit']").click()
-
-   await expect(page.locator)
-
+   await page. locator("//label[normalize-space(text())='Name']/following::input").fill(employests[employe]);
+ 
 })
-
-
 }
