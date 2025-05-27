@@ -8,11 +8,11 @@ import login from '../testdata/login.json';
 
 test("Verify login with valid credentials", async ({ page }) => {
 
-   await page.goto("/web/index.php/auth/login")
+   await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
    await page.locator("input[name='username']").fill(login.username)
 
-   await page.locator("input[type='password']").fill(login)
+   await page.locator("input[type='password']").fill(login.password)
 
    await page.locator("button[type='submit']").click()
 
@@ -26,9 +26,9 @@ test("Verify login with valid credentials", async ({ page }) => {
 
       await page.goto("/web/index.php/auth/login")
 
-      await page.locator("input[name='username']").fill(logininputs[0])
+      await page.locator("input[name='username']").fill(login.username)
 
-      await page.locator("input[type='password']").fill(logininputs[3])
+      await page.locator("input[type='password']").fill(password)
 
       await page.locator("button[type='submit']").click()
 
@@ -49,7 +49,7 @@ test("Verify login with valid credentials", async ({ page }) => {
 
       await page.locator("input[name='username']").fill(wrongusername)
 
-      await page.locator("input[type='password']").fill(passwrod)
+      await page.locator("input[type='password']").fill(login.passwrod)
 
       await page.locator("button[type='submit']").click()
 
@@ -71,7 +71,7 @@ test("Verify login with valid credentials", async ({ page }) => {
 
       await page.locator("input[type='password']").fill(logincreds[1])
 
-      await page.waitForTimeout(30000)
+    //  await page.waitForTimeout(30000)
 
 
       await page.locator("button[type='submit']").click()

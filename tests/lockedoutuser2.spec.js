@@ -1,5 +1,4 @@
 
-import data from './testdata/lockedoutuser.json'
 import { test, expect } from '@playwright/test';
 
 test('verify swaglabs locked_out_user2 loginfunctionality with valid credentials ', async ({ page }) => {
