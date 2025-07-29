@@ -1,9 +1,10 @@
 const { test, expect } = require('@playwright/test');
 
+//import data from "../testdata/login.json"
+//import jobtitledata from "../testdata/addjobtitle.json"
+
 import data from "../testdata/login.json"
 import jobtitledata from "../testdata/addjobtitle.json"
-
-
 let page
 
 const creds = {
@@ -12,26 +13,34 @@ const creds = {
     password: "admin123"
 }
 
-test.beforeEach(async ({browser}) => {
+test.beforeEach(async({page}) =>{
 
-   page = await browser.newPage();
+
+    await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+
+})
+
+test.describe('group1',() =>{
+
+test('verify addjob title',{tag:["@smoke","@raju"]},async ({page}) => {
+
+   //page = await browser.newPage();
 
     //    test.setTimeout(60000)
     // Navigate to the application
-    await page.goto('/web/index.php/auth/login');
-
-    console.log("Launching the application")
+//await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
+    //console.log("Launching the application")
     // Enter username and password
     await page.locator("input[name='username']").fill(creds.username)
-    console.log("Entering username")
+    //console.log("Entering username")
 
     await page.locator("input[type='password']").fill(creds.password)
-    console.log("Entering password")
+   // console.log("Entering password")
 
     //click on login button
 
     await page.locator("button[type='submit']").click()
-    console.log("Clicking on login button")
+    ////console.log("Clicking on login button")
 
     // Verify that the user is redirected to the dashboard page
 
@@ -60,19 +69,12 @@ test.beforeEach(async ({browser}) => {
 });
 
 
-test.afterEach(async () => {
-
-    // Close the browser
-    await page.close();
-    console.log("Closing the browser")
-
-});
 
 test('Verify Add job title with Mandatory fields', {tag : "@smoke"},async () => {
 
     const random5Char = Math.random().toString(36).substring(2, 7); // 5 chars 
 
-    await page.locator("(//input[@class='oxd-input oxd-input--active'])[2]").fill(jobtitledata.jobTitle + random5Char)
+    await page.locator('(//input[@class="oxd-input oxd-input--active"])[2]').fill(jobtitledata.jobTitle + random5Char)
 
     await page.locator("//textarea[@placeholder='Type description here']").fill(jobtitledata.jobDescription)
 
@@ -87,10 +89,18 @@ test('Verify Add job title with Mandatory fields', {tag : "@smoke"},async () => 
 test.skip('Verify Add job title fileds max chars limit', async () => {
 
 
-    await page.locator("(//input[@class='oxd-input oxd-input--active'])[2]").fill("gtrkjhhutriughtrkjgk  hjdefbgijrtiugjiotrhg kjnhtrhjgiutrh kjniubvhrtktjnbdfsjgbherguneriugiuerhtgkjherjgnerkjvnjherhntjhgtrjhbgjtrhbguhrekjgherkjgbkjerhgyuh4ihger,mngjefjhgiu")
+    await page.locator("(//input[@class='oxd-input oxd-input--active'])[1]").fill("gtrkjhhutriughtrkjgk  hjdefbgijrtiugjiotrhg kjnhtrhjgiutrh kjniubvhrtktjnbdfsjgbherguneriugiuerhtgkjherjgnerkjvnjherhntjhgtrjhbgjtrhbguhrekjgherkjgbkjerhgyuh4ihger,mngjefjhgiu")
 
     await expect(page.locator('span[class="oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message"]')).toBeVisible()
 
 
 
 });
+
+
+// test.afterAll(async () => {
+
+//     // Close the browser
+//     await page.close();
+
+ });

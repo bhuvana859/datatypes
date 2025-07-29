@@ -9,7 +9,7 @@ test.describe('Automation - Working with Alerts', () => {
 
   //  1. simple alert
 
-  test.only('Playwright Test Case - Simple Alert', async ({ page }) => {
+  test('Playwright Test Case - Simple Alert', async ({ page }) => {
     // Trigger the alert
     page.locator('text=Click for JS Alert').click();
     await page.waitForTimeout(5000)
@@ -34,7 +34,7 @@ test.describe('Automation - Working with Alerts', () => {
     page.locator('text=Click for JS Confirm').click();
     // Wait for the confirm dialog and accept it (Click OK)
     page.on('dialog', async dialog => {
-      expect(dialog.type()).toBe('confirm');
+      expect(dialog.type()).toBe('confirm'); // it will show confirm allert
       await dialog.accept();
     });
     await page.waitForTimeout(5000)

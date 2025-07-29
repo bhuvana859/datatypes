@@ -7,7 +7,7 @@ exports.dashBoardPage = class dashBoardPage{
         this.page= page
         
         this.pim = page.locator('a[href="/web/index.php/pim/viewPimModule"]')
-        this.Admin = page.locator('span[class="oxd-text oxd-text--span oxd-main-menu-item--name"]').nth(1)
+         this.admin = page.locator('//span[@class="oxd-text oxd-text--span oxd-main-menu-item--name"]').first()
 
         
      }
@@ -17,9 +17,11 @@ exports.dashBoardPage = class dashBoardPage{
        await  this.pim.click()
      }
 
-     
-     async clickonAdmin(){
-      
-       await this.Admin.click()
+
+     async clickAdmin(){
+
+       await  this.admin.click()
+
+
 }
 }

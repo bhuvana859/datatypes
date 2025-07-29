@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test("Verify Create a Reddif Email account ", async ({page})=>{
+test("Verify Create a Reddif Email account ",{tag:["@smoke","@raju"]}, async ({page})=>{
 
     await page.goto("https://register.rediff.com/register/register.php?FormName=user_details")
 

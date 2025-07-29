@@ -1,6 +1,6 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
-
+require('dotenv').config()
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -13,42 +13,67 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
+   globalTimeout: 1800*1000,
+  expect : {
+         timeout : 15000
+  },
+   timeout: 60000,
   testDir: './tests',
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 2 :undefined ,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+ // reporter:[['list'], ['html']["allure-playwright"]],
+  reporter: [
+    ['list'],
+    ['html'],
+    ['json', { outputFile: 'test-results.json' }],
+    ['junit', { outputFile: 'test-results.xml' }],
+    // ['allure-playwright']
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
-    // baseURL: 'http://localhost:3000',
+   // baseURL: 'https://opensource-demo.orangehrmlive.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    //trace: 'on-first-retry',
+        trace: "on",
+    video: "on",
+    screenshot: "on",
+    headless: true,
+    
   },
 
   /* Configure projects for major browsers */
   projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+
+      {
+      name: "setup",
+      use: { ...devices['Desktop Chrome'], 
+        channel: 'chrome'  },
+      testMatch: /.*\.setup\.js/,
     },
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+// {
+//       name: 'chromium',
+//       use: { ...devices['Desktop Chrome'] },
+//     },
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
+    // {
+    //   name: 'firefox',
+    //   use: { ...devices['Desktop Firefox'] },
+    // },
+
+    // {
+    //   name: 'webkit',
+    //   use: { ...devices['Desktop Safari'] },
+    // },
 
     /* Test against mobile viewports. */
     // {
@@ -65,11 +90,14 @@ export default defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    // {
-    //   name: 'Google Chrome',
-    //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    // },
-  ],
+    {
+      name: 'Google Chrome',
+      use: { ...devices['Desktop Chrome'], channel: 'chrome' }, 
+           // storageState : ".auth/user.json",
+    },
+           // dependencies: ["setup"],
+            
+],
 
   /* Run your local dev server before starting the tests */
   // webServer: {
@@ -78,4 +106,5 @@ export default defineConfig({
   //   reuseExistingServer: !process.env.CI,
   // },
 });
+
 

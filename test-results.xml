@@ -1,0 +1,59 @@
+<testsuites id="" name="" tests="5" failures="0" skipped="0" errors="0" time="28.253926">
+<testsuite name="WWE\alert.spec.js" timestamp="2025-07-29T11:51:25.869Z" hostname="Google Chrome" tests="5" failures="0" skipped="0" time="24.943" errors="0">
+<testcase name="simple allert" classname="WWE\alert.spec.js" time="5.712">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\WWE-alert-simple-allert-Google-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\WWE-alert-simple-allert-Google-Chrome\video.webm]]
+
+[[ATTACHMENT|test-results\WWE-alert-simple-allert-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Playwright Test Case - test Confirm Alert - OK" classname="WWE\alert.spec.js" time="3.964">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-Confirm-Alert---OK-Google-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-Confirm-Alert---OK-Google-Chrome\video.webm]]
+
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-Confirm-Alert---OK-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Playwright Test Case - test Confirm Alert - cancel" classname="WWE\alert.spec.js" time="4.42">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-Confirm-Alert---cancel-Google-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-Confirm-Alert---cancel-Google-Chrome\video.webm]]
+
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-Confirm-Alert---cancel-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Playwright Test Case - test prompt Alert - ok" classname="WWE\alert.spec.js" time="6.872">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-prompt-Alert---ok-Google-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-prompt-Alert---ok-Google-Chrome\video.webm]]
+
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-prompt-Alert---ok-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Playwright Test Case - test prompt Alert - cancle" classname="WWE\alert.spec.js" time="3.975">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-prompt-Alert---cancle-Google-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-prompt-Alert---cancle-Google-Chrome\video.webm]]
+
+[[ATTACHMENT|test-results\WWE-alert-Playwright-Test-Case---test-prompt-Alert---cancle-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+</testsuites>

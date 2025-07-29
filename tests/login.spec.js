@@ -24,11 +24,11 @@ test("Verify login with valid credentials", async ({ page }) => {
 
    test("Verify login with valid username and Invalid password", async ({ page }) => {
 
-      await page.goto("/web/index.php/auth/login")
+      await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
       await page.locator("input[name='username']").fill(login.username)
 
-      await page.locator("input[type='password']").fill(password)
+      await page.locator("input[type='password']").fill(login.username)
 
       await page.locator("button[type='submit']").click()
 
@@ -45,11 +45,11 @@ test("Verify login with valid credentials", async ({ page }) => {
 
        const wrongusername = "brfjb"
        const passwrod = "admin123"
-      await page.goto("/web/index.php/auth/login")
+      await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
-      await page.locator("input[name='username']").fill(wrongusername)
+      await page.locator("input[name='username']").fill(login.password)
 
-      await page.locator("input[type='password']").fill(login.passwrod)
+      await page.locator("input[type='password']").fill(login.password)
 
       await page.locator("button[type='submit']").click()
 
@@ -61,15 +61,15 @@ test("Verify login with valid credentials", async ({ page }) => {
 
    test("Verify login with invalid username and invalid password", async ({ page }) => {
 
-      const logincreds =  ["ehfvbherwbfv", "fvuybeffuvbeu"]
+      //const logincreds =  ["ehfvbherwbfv", "fvuybeffuvbeu"]
 
       await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")
 
-      await page.locator("input[name='username']").fill(logincreds[0])
+      await page.locator("input[name='username']").fill(login.password)
 
       await page.waitForTimeout(5000)
 
-      await page.locator("input[type='password']").fill(logincreds[1])
+      await page.locator("input[type='password']").fill(login.username)
 
     //  await page.waitForTimeout(30000)
 
