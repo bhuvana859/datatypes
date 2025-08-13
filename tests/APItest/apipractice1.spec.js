@@ -26,8 +26,6 @@ test("POST create user",async({request})=>{
       "employeeId": "04541"
     }
 
-    
-    
     const createUser=await request.post(url,{headers,data:payload})
      expect(createUser.status()).toBe(200)
     const response= await createUser.json()
