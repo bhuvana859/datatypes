@@ -2,7 +2,7 @@ const {  test, expect } = require('@playwright/test');
 
 test.describe('Automation - Working With Elements', () => {
 
-  test.only('handle tabs - example 1', async ({ page }) => {
+  test('handle tabs - example 1', async ({ page }) => {
 
     await page.goto('https://the-internet.herokuapp.com/windows');
 
@@ -13,7 +13,7 @@ test.describe('Automation - Working With Elements', () => {
 
     // console.log(newTab.url());
     // expect(await newTab.title()).toBe('New Window');
-
+``
     const textvalue = await newTab.locator('.example>h3').textContent();
 
     console.log("Text on new page:", textvalue);
@@ -48,7 +48,7 @@ test.describe('Automation - Working With Elements', () => {
   });
 
 
-  test("flipkart - verify product display", async ({ page }) =>{
+  test.only("flipkart - verify product display", async ({ page }) =>{
 
       await page.goto('https://www.flipkart.com/');
 
@@ -62,11 +62,12 @@ test.describe('Automation - Working With Elements', () => {
         await page.locator("//div[text()='Apple iPhone 16 (Black, 128 GB)']").click()
     ]);
 
-    await expect(newTab).toHaveURL(/apple-iphone-16-black-128-gb/)
+    await expect(newTab).toHaveURL(/apple-iphone-16-black-128-gb/)   // URL verifycation
    
 
-    const nameofthePhone = await newTab.locator("._6EBuvT>span").textContent();
+    const nameofthePhone = await newTab.locator("._6EBuvT>span").textContent(); //text visible or not we have verify
 
+    wait 
     console.log(nameofthePhone)
 
     await page.locator("//div[text()='Apple iPhone 13 (Midnight, 128 GB)']").click()

@@ -2,30 +2,24 @@ import { expect, test } from "@playwright/test";
 import fs from 'fs';
 
 
-test('Get API', async ({ request }) => {
+test.only('Get API', async ({ request }) => {
 
   const getAllUsers = await request.get(`https://reqres.in/api/users?page=2`);
 
 
-  expect(getAllUsers.ok()).toBeTruthy();
+  expect(getAllUsers.ok()).toBeTruthy();5
   expect(getAllUsers.status()).toBe(200);
 
   console.log(await getAllUsers.json())
-
-  const response = await getAllUsers.json()
-
-  expect(response.page).toBe(2)
-  expect(response).toHaveProperty('total_pages');
-  expect(response.total_pages).toBe(2);
-
-
-  expect(response.data[0].email).toBe("michael.lawson@reqres.in")
-
-  expect(response.data[0].first_name).toBe("Michael")
-
-
-
+  const response = await getAllUsers.json()                     //save it as a variable
+  
+  expect(response.page).toBe(2)                                       //get response assertion
+  expect(response).toHaveProperty('total_pages');                    //get response assertion    
+  expect(response.total_pages).toBe(2);                             //get response assertion
+  expect(response.data[0].email).toBe("michael.lawson@reqres.in")  //get response assertion
+  expect(response.data[0].first_name).toBe("Michael")               //get response assertion
 });
+
 
 
 test('POST API', async ({ request }) => {
@@ -34,8 +28,8 @@ test('POST API', async ({ request }) => {
     {
       headers: { "x-api-key": "reqres-free-v1" },
       data: {
-        "name": "Mohan",
-        "job": "student"
+        "name": "chethan",
+        "job": "tester"
       }
     });
   expect(createUser.ok()).toBeTruthy();
@@ -45,8 +39,8 @@ test('POST API', async ({ request }) => {
 
   const response = await createUser.json()
 
-  expect(response.name).toBe("Mohan")
-  expect(response.job).toBe("student")
+  expect(response.name).toBe("chethan")
+  expect(response.job).toBe("tester")
 
   console.log(response.id)
   console.log(response.createdAt)

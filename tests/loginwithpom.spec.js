@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
 import { loginPage } from "../pageobjects/loginpage.po";
-import logindata from "../testdata/login.json"
+import logindata from '../testdata/login1.json'
 import { dashBoardPage } from "../pageobjects/dashBaordPage.po";
 
 
