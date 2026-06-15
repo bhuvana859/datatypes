@@ -11,7 +11,6 @@ test("Verify login with valid credentials", async ({ page }) => {
    await page.locator("input[type='password']").fill('password')
 
    await page.locator("button[type='submit']").press('$');
-   
    await page.waitForTimeout(5000)
 
    await page.locator("input[name='username']").clear()

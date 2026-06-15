@@ -1,8 +1,7 @@
 const { test, expect } = require('@playwright/test');
-
-import data from "../testdata/login.json"
-import jobtitledata from "../testdata/addjobtitle.json"
-
+import logindata from '../testdata/login1.json'
+import jobtitledata from '../testdata/addjobtitle.json'
+import { SelectorHubLoginPage } from "../pageobjects/selectorhublogin.po";
 
 let page
 

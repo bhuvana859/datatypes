@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-import data from "../testdata/login.json"
+import data from "../testdata/login1.json"
 import jobtitledata from "../testdata/addjobtitle.json"
 
 

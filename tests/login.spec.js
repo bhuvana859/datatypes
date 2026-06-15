@@ -4,8 +4,7 @@ import logindata from '../testdata/login1.json'
 
 
 
-//const logininputs  = ["Admin", "admin123", "ekjnfiuhew", "ebfuhrewiuwbhf"]
-
+const logininputs  = ["Admin", "admin123", "ekjnfiuhew", "ebfuhrewiuwbhf"]
 test("Verify login with valid credentials", async ({ page }) => {
 
    await page.goto("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login")

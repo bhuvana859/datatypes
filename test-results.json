@@ -11,9 +11,44 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 0
+      "actualWorkers": 1
     },
     "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/LEARNINGPLAYWRIGHTB22/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "D:/LEARNINGPLAYWRIGHTB22/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.js/"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "D:/LEARNINGPLAYWRIGHTB22/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "Google Chrome",
+        "name": "Google Chrome",
+        "testDir": "D:/LEARNINGPLAYWRIGHTB22/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
     "reporter": [
       [
         "list",
@@ -40,54 +75,79 @@
       "max": 5,
       "threshold": 300000
     },
-    "quiet": false,
-    "projects": [
-      {
-        "outputDir": "D:/LEARNINGPLAYWRIGHTB22/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 0
-        },
-        "id": "setup",
-        "name": "setup",
-        "testDir": "D:/LEARNINGPLAYWRIGHTB22/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "/.*\\.setup\\.js/"
-        ],
-        "timeout": 60000
-      },
-      {
-        "outputDir": "D:/LEARNINGPLAYWRIGHTB22/test-results",
-        "repeatEach": 1,
-        "retries": 0,
-        "metadata": {
-          "actualWorkers": 0
-        },
-        "id": "Google Chrome",
-        "name": "Google Chrome",
-        "testDir": "D:/LEARNINGPLAYWRIGHTB22/tests",
-        "testIgnore": [],
-        "testMatch": [
-          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-        ],
-        "timeout": 60000
-      }
-    ],
     "shard": null,
+    "tags": [],
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
-    "version": "1.54.1",
+    "updateSourceMethod": "patch",
+    "version": "1.60.0",
     "workers": 4,
     "webServer": null
   },
-  "suites": [],
+  "suites": [
+    {
+      "title": "orangehrmlogin.spec.js",
+      "file": "orangehrmlogin.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "orange hrm login functionality",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "Google Chrome",
+              "projectName": "Google Chrome",
+              "results": [
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 14367,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-06-13T14:25:40.960Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\LEARNINGPLAYWRIGHTB22\\test-results\\orangehrmlogin-orange-hrm-login-functionality-Google-Chrome\\test-finished-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\LEARNINGPLAYWRIGHTB22\\test-results\\orangehrmlogin-orange-hrm-login-functionality-Google-Chrome\\video.webm"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\LEARNINGPLAYWRIGHTB22\\test-results\\orangehrmlogin-orange-hrm-login-functionality-Google-Chrome\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "d3b0f1e65d9c0d0c652e-a8f9426a06a890d89afe",
+          "file": "orangehrmlogin.spec.js",
+          "line": 3,
+          "column": 5
+        }
+      ]
+    }
+  ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-14T11:40:23.868Z",
-    "duration": 912.3739999998361,
-    "expected": 0,
+    "startTime": "2026-06-13T14:25:38.308Z",
+    "duration": 19534.565000000002,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

@@ -47,7 +47,7 @@ export default defineConfig({
     video: "on",
     screenshot: "on",
     headless: true,
-    
+    Trace:"on",
   },
 
   /* Configure projects for major browsers */

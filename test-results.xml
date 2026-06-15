@@ -1,2 +1,15 @@
-<testsuites id="" name="" tests="0" failures="0" skipped="0" errors="0" time="0.912373999999836">
+<testsuites id="" name="" tests="1" failures="0" skipped="0" errors="0" time="19.534565">
+<testsuite name="orangehrmlogin.spec.js" timestamp="2026-06-13T14:25:39.656Z" hostname="Google Chrome" tests="1" failures="0" skipped="0" time="14.367" errors="0">
+<testcase name="orange hrm login functionality" classname="orangehrmlogin.spec.js" time="14.367">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\orangehrmlogin-orange-hrm-login-functionality-Google-Chrome\test-finished-1.png]]
+
+[[ATTACHMENT|test-results\orangehrmlogin-orange-hrm-login-functionality-Google-Chrome\video.webm]]
+
+[[ATTACHMENT|test-results\orangehrmlogin-orange-hrm-login-functionality-Google-Chrome\trace.zip]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
 </testsuites>
